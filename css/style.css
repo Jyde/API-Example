@@ -1,0 +1,348 @@
+/**************************************
+	CSS STYLING FOR IT-eBOOKS
+**************************************/
+
+/*General Body styles*/
+body {
+
+	font-family: "Open Sans",sans-serif;
+	color:#222;
+	font-size: 12px;
+	background-color: #EEE;
+}
+#wrapper{
+	display: block;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/**************************************
+	HEADING AREA
+**************************************/
+/*Heading*/
+#headerContianer{
+	position: fixed;
+/*	margin-right: -140px;*/
+	width: 100%;
+	display: block;
+	margin-top: -230px;
+}
+/*Styling header 'IT'*/
+span.stylHead {
+	color: white;
+}
+/*header properties*/
+#header {
+	background:#CCCCCC url('../img/myBackgroundHeader.png') no-repeat; 
+	display:block;
+	background:;
+	height: 83px;
+	margin: 0;
+	padding: 0 10px 0;
+	background-size: cover;
+
+}
+
+/*Search icon position*/
+.search {
+	display: inline-block;
+	margin:30px 20px  0 0px;
+	background: url('../img/icons-sc52874665f.png') no-repeat scroll 0px -1186px transparent;
+	height: 22px;
+	width: 22px;
+}
+
+/*Text Properties*/
+h1 {
+  	display: inline-block;
+  	margin: 0 ;
+  	color: #00A9DF;
+  	font-weight: 800;
+
+}
+/*search Area*/
+.search-area {
+	display: block;
+	background-color: #999;
+	padding: 15px 10px 46px;
+
+}
+/*search Bar*/
+.search-area input {
+	width: 220px;
+	height: 31px;
+	padding:7px 10px 9px;
+	box-sizing: border-box;
+	background-color: #CCC;
+	border:none;
+	text-shadow:none;
+	font-size: 12px;
+	font-style: italic;
+}
+/*Search Button and Download*/
+.search-area-btn, .pdf{
+	box-sizing: border-box;
+	height: 31px;
+	padding: 0 10px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #00E285;
+	color: white;
+	border:none;
+	line-height: 31px;
+	margin-left: 5px;
+
+}
+
+.search-area-btn:hover, .pdf:hover{
+	background-color: #33B981;
+	;
+}
+
+.search-area input:focus{
+	background-color: #bfbfbf;
+}
+
+.warning, .notice{
+	margin: 3px 0 0 5px;
+	padding: 3px;
+	font-style: italic;
+}
+
+.totalItems{
+	margin-top: 10px;
+}
+
+/**************************************
+	RESULT AREA
+**************************************/
+/*lists the result of the search*/
+#resultWindow{
+	display: block;
+	margin-top: 230px;
+/*	padding: 0 5px;*/
+}
+
+/*Contains the details odf a book*/
+#bookShelf{
+	padding: 0 5px;
+}
+
+
+/*Dynamically placed elements*/
+#bookShelf li{
+
+	width: 80%;
+	margin: 0 auto;
+	background-color: #fff;
+	border:1px solid #999;
+	margin-bottom: 10px;
+	padding:10px;
+/*	opacity:1;*/
+}
+
+
+#bookShelf li:hover{
+	background-color: #FAFAFA;
+}
+/*#bookShelf li:focus, #bookShelf li:hover{
+	opacity: 1;
+}*/
+
+/*Book Title link*/
+#bookShelf li a{
+	text-decoration: none;
+	color: #00A9DF;
+}
+
+#bookShelf li a:hover{
+	text-decoration: underline;
+	color: #3BAFDA;
+}
+
+/*Center align book image and book title*/
+p.imgBook, p.bookImg, h3 {
+	text-align: center;
+}
+
+p, p.bookDescription {
+	text-align: justify;
+}
+
+#bookDetails {
+	width: 80%;
+	padding: 10px;
+	border: 1px solid #999;
+	background-color: white;
+	margin: 0 auto 20px;
+}
+
+#overlay {
+	display: none;
+}
+/*Result Loading*/
+#loader {
+	margin:5px;
+}
+
+#loader img{
+	width: 20px;
+	height: 20px;
+}
+
+#errorImg {
+	text-align: center;
+	margin: 200px auto 0;
+
+}
+#errorImg img{
+max-width: 70%
+}
+
+
+/**************************************
+	Responsive Layout
+**************************************/
+@media screen and (min-width: 481px){
+
+	/*float the list elements to the left*/
+	#bookShelf li{
+
+	width: 40%;
+	height: 400px;
+	margin:2.5%;
+	float: left;
+	overflow: hidden;
+	}
+
+	/*increase the search area width*/
+	.search-area input {
+	width: 300px;
+	}
+
+	/*take the search icon to the right*/
+	.search {
+		float: right;
+		padding-right: 20px;
+	}
+
+/*Set image width and height*/
+	img {
+		width:150px;
+		height: 180px;
+	}
+
+/*Text Properties*/
+	h1 {
+		text-align: center;
+		font-weight: bolder;
+		padding: 30px 0 0 100px;
+		font-weight: 800;
+		font-size: 2.5em;
+	}
+	/*add pagination*/
+
+	#overlay {
+	display:visible;
+	background:rgba(0,0,0,0.7);
+  	width:100%;
+  	height:100%;
+  	position:absolute;
+  	top:0;
+  	left:0;
+  	text-align:center;
+	}
+
+	#overlay p {
+ 		color:white; 
+	}
+	#bookDetails {
+		width: 80%;
+		padding: 20px;
+		margin: 0 auto 20px;
+	}
+
+	#bookDetails img{
+		float: left;
+		display: block;
+		margin: 0 5% 70% 5%;
+	}
+
+	/*Book cannot be found*/
+#errorImg {
+	text-align: center;
+	margin: 200px auto 0;
+
+}
+
+#errorImg img{
+	width: 469px;
+	height: 330px;
+
+}
+
+}
+
+@media screen and (min-width: 660px){
+
+	/*list all the found books */
+		#bookShelf li{
+			width: 150px;
+			height: 250px;
+			margin: 1%;
+			padding:5px 10px 10px;
+		}
+	/*hide leading Book Description and Url text*/
+	 p.bookDescription, p.bookUrl {
+		display: none;
+		}
+
+	#bookDetails {
+		width: 50%;
+		padding: 20px;
+		border: 1px solid #999;
+		background-color: white;
+		margin: 0 auto 20px;
+	}
+
+	#bookDetails p.bookDescription{
+		text-align: justify;
+
+	}
+
+	#bookDetails img{
+		float: left;
+		display: block;
+		margin: 0 5% 70% 5%;
+	}
+
+	label {
+		width: 150px;
+		font-weight: bold;
+	}
+
+	/*Text Properties*/
+	h1 {
+		text-align: center;
+		font-weight: bolder;
+		padding: 30px 0 0 100px;
+		font-weight: 800;
+		font-size: 2.5em;
+	}
+
+}
+
+
+/*	//float the list elements to the left
+	//going to display the books Image and subtitle and a button to view details
+	//set the search button to aligned center the search area width
+	//take the search icon to the right*/
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IT Books</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link type="text/css" rel="stylesheet" href="js/simplePagination.css"/>
+	</head>
+	<body>
+	<div id="wrapper">
+	<!-- Header -->
+		<div id="headerContianer">
+			<div id="header">
+					<i class="search"></i>
+				<a href="index.html"><h1><span class="stylHead">IT</span> e-Books</h1></a>
+			
+			</div>
+	<!-- Search Area -->
+			<div class="search-area">
+				<div class="groupSearch">
+					<input id="findEbook" class"search-area-input" type="text" placeholder="Search...">
+
+					<button id="searchEbook" class="search-area-btn">Go</button>
+					<!-- result of input -->
+					<span id="loader"><img src="img/ajax-load.gif"></span>
+					<span id="warning" class="notice"></span>
+					<div class="totalItems">
+						<span id="compact-pagination" class="compact-theme simple-pagination">
+							<ul>
+								<!-- pagination -->
+							</ul>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- Search result Area-->
+		<div id="resultWindow">
+
+		<!--Welcome Page toggles with the loading functionality -->
+		
+			<!-- Gallery of books -->
+			<ul id="bookShelf">
+				<!-- stack books -->
+			</ul>	
+		</div>
+	<!-- Book Details -->
+		<div id="bookDetails">
+		</div>
+	</div>
+<!-- JS functionality -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.simplePagination.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
