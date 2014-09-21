@@ -10,7 +10,7 @@ var searchManager = {
 	findEbook:null,
 	searchEbook:null,
 	warning: null,
-	eBook:"php mysql",
+	eBook:"php mysql rails",
 
 	onReady: function(){
 			searchManager.findEbook = $('#findEbook');
