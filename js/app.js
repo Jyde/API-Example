@@ -10,7 +10,7 @@ var searchManager = {
 	findEbook:null,
 	searchEbook:null,
 	warning: null,
-	eBook:null,
+	eBook:"php mysql",
 
 	onReady: function(){
 			searchManager.findEbook = $('#findEbook');
@@ -21,6 +21,7 @@ var searchManager = {
 			$('#bookDetails').hide();
 			$('#loader').hide();
 			$('#bookDetails').hide();
+			searchManager.searchEvent();
 		},
 
 		submitSearch:function(){
